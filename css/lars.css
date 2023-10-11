@@ -1,0 +1,16 @@
+:root{
+    --yellow: #FFCA42;
+    --darkgrey: #212121;
+    --lightgrey: #E2E2E2;
+    --purple: #3D1B5A;
+    --lightpurple: #867396;
+}
+h1{
+    color: white;
+}
+
+body{
+    background-color: var(--purple);
+}
+
+
