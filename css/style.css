@@ -122,19 +122,20 @@ body{
 
 
 /* Grid recent Projects */
-.grid-container-recent-projects {
+  .grid-container-recent-projects {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   column-gap: 20px;
-  max-width: 50vw;
+  width: 50vw;
   
 }
 
 .grid-item-recent-projects {
   font-family: 'Sarabun', sans-serif;
   background-color: var(--lightpurple);
-  padding: 20px;
-  font-size: large;
-  text-align: center;
   border-radius: 10px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+} 
