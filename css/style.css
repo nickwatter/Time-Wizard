@@ -9,7 +9,13 @@
 }
 h1{
     color: var(--yellow);
+    margin-top: 0;
+    padding-top: 10px;
   
+}
+
+body{
+  margin: 0;
 }
 
 /* The side navigation menu */
@@ -17,7 +23,7 @@ h1{
     height: 100%; /* 100% Full-height */
     width: 110px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: -1; /* Stay on top */
+    z-index: 99; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: var(--lightgray); /* Black*/
@@ -62,9 +68,27 @@ h1{
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding-left: 20px;
+    margin-top: 0;
     margin-left: 110px;
+    background-color: var(--purple);
+    height: 100vh;
   }
+
+  /* #overlay {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 98;
+    transition: 0.5s;
+  }
+
+  #overlay.active {
+    display: block;
+    transition: 0.5s;
+  } */
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
