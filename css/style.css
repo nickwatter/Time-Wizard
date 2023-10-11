@@ -5,13 +5,24 @@
     --lightgray: #E2E2E2;
     --purple: #3D1B5A;
     --lightpurple: #867396;
-
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;500;600;700&display=swap');
+
+
 h1{
-    color: var(--yellow);
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+    color: white;
     margin-top: 0;
-    padding-top: 10px;
-  
+    padding-top: 60px;
+}
+
+h2{
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: x-large;
 }
 
 body{
@@ -20,7 +31,10 @@ body{
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    height: 100vh; /* 100% Full-height */
     width: 110px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 99; /* Stay on top */
@@ -28,7 +42,7 @@ body{
     left: 0;
     background-color: var(--darkgray); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   
@@ -68,7 +82,7 @@ body{
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s;
-    padding-left: 20px;
+    padding-left: 60px;
     margin-top: 0;
     margin-left: 110px;
     background-color: var(--purple);
@@ -100,5 +114,27 @@ body{
     width: 50px;
     height: auto;
     object-fit: cover;
-
   }
+
+  #logolighttimewizard{
+    padding-bottom: 40px;
+  }
+
+
+/* Grid recent Projects */
+.grid-container-recent-projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  max-width: 50vw;
+  
+}
+
+.grid-item-recent-projects {
+  font-family: 'Sarabun', sans-serif;
+  background-color: var(--lightpurple);
+  padding: 20px;
+  font-size: large;
+  text-align: center;
+  border-radius: 10px;
+}
