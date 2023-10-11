@@ -1,24 +1,26 @@
 
 :root{
     --yellow: #FFCA42;
-    --darkgrey: #212121;
-    --lightgrey: #E2E2E2;
+    --darkgray: #212121;
+    --lightgray: #E2E2E2;
     --purple: #3D1B5A;
     --lightpurple: #867396;
+
 }
 h1{
     color: var(--yellow);
   
 }
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 60px; /* 0 width - change this with JavaScript */
+    width: 110px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: -1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: var(--lightgray); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -36,7 +38,7 @@ h1{
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: var(--yellow);
   }
   
   /* Position and style the close button (top right corner) */
@@ -48,6 +50,15 @@ h1{
     margin-left: 50px;
   }
   
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 30px;
+  }
+
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s;
@@ -59,3 +70,10 @@ h1{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     }
+
+  .imgsidenav{
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+
+  }
