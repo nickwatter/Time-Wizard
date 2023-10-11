@@ -1,16 +1,139 @@
 :root{
     --yellow: #FFCA42;
-    --darkgrey: #212121;
-    --lightgrey: #E2E2E2;
+    --darkgray: #212121;
+    --lightgray: #E2E2E2;
     --purple: #3D1B5A;
     --lightpurple: #867396;
+
 }
 h1{
     color: white;
+    margin-top: 0;
+    /* padding-top: 10px; */
+  
 }
 
 body{
-    background-color: var(--purple);
+    margin: 0;
+  }
+
+
+  #projecttop{
+    margin-bottom: 30px;
+  }
+
+
+
+td{
+ color: white;
 }
+
+th{
+    color: white;
+    background-color: var(--lightpurple);
+    text-align: left;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+  td {
+    text-align: left;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* The side navigation menu */
+  .sidenav {
+      height: 100%; /* 100% Full-height */
+      width: 110px; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 99; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: var(--darkgray); /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: var(--yellow);
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    .item {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: flex-start;
+      padding-top: 20px;
+      gap: 30px;
+    }
+  
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+      transition: margin-left .5s;
+      padding-left: 60px;
+      padding-right: 60px;
+      margin-top: 0;
+      margin-left: 110px;
+      background-color: var(--purple);
+      height: 100%;
+      padding-top: 60px;
+    }
+  
+    /* #overlay {
+      position: fixed;
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.2);
+      z-index: 98;
+      transition: 0.5s;
+    }
+  
+    #overlay.active {
+      display: block;
+      transition: 0.5s;
+    } */
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+      }
+  
+    .imgsidenav{
+      width: 50px;
+      height: auto;
+      object-fit: cover;
+  
+    }
 
 
