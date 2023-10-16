@@ -1,44 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <div id="mySidenav" class="sidenav">
         <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
-        <a href="#"><div class="item"><img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard" class="imgsidenav"></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav"><h2>Profile</h2></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav"><h2>Dashboard</h2></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav"><h2>Projects</h2></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav"><h2>Tasks</h2></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav"><h2>Team</h2></div></a>
-      </div>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"
+                    class="imgsidenav"></div>
+        </a>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav">
+                <h2>Profile</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
+                <h2>Dashboard</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav">
+                <h2>Projects</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
+                <h2>Tasks</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav">
+                <h2>Team</h2>
+            </div>
+        </a>
+    </div>
 
-      <div id="overlay"></div>
+    <div id="overlay"></div>
     <main id="main">
         <div class="grid-wrapper-dashboard">
-             <h1>Recent Projects</h1>
+            <div class="recent-projects">
+                <h1>Recent Projects</h1>
                 <div class="flex-recent-projects">
-                    <div class="flex-item-recent-projects"><h2>Gritect AG</h2></div>
-                    <div class="flex-item-recent-projects"><h2>Innovis</h2></div>
-                    <div class="flex-item-recent-projects"><h2>Siro</h2></div>
+                    <div class="flex-item-recent-projects">
+                        <h2>Gritect AG</h2>
+                    </div>
+                    <div class="flex-item-recent-projects">
+                        <h2>Innovis</h2>
+                    </div>
+                    <div class="flex-item-recent-projects">
+                        <h2>Siro</h2>
+                    </div>
                 </div>
-                <div class="flex-recent-timer">
-                    <div>
-                        <h1>Recent Timer</h1>
-                        <div class="flex-item-recent-timer">
-                            
+            </div>
+            <div class="flex-active-tasks">
+                <h1>Active Tasks</h1>
+                <div class="background-stop-watch">
+                    <div class="stopwatch-container">
+                        <h2>Task Alpha</h2>
+                        <div class="stopwatch-display">
+                            <div class="timer-title">
+                                <span class="hours" id="timer-field">00</span>
+                                <h5>hours</h5>
+                            </div>
+                            <div class="timer-title">
+                                <span class="minutes" id="timer-field">00</span>
+                                <h5>munites</h5>
+                            </div>
+                            <div class="timer-title">
+                                <span class="seconds" id="timer-field">00</span>
+                                <h5>seconds</h5>
+                            </div>
+                        </div>
+                        <div class="stopwatch-buttons">
+                            <button id="start-button">Start</button>
+                            <button id="stop-button">Stop</button>
                         </div>
                     </div>
-                    
-
+                    <div class="stopwatch-container">
+                        <h2>Task Alpha</h2>
+                        <div class="stopwatch-display">
+                            <div class="timer-title">
+                                <span class="hours" id="timer-field">00</span>
+                                <h5>hours</h5>
+                            </div>
+                            <div class="timer-title">
+                                <span class="minutes" id="timer-field">00</span>
+                                <h5>munites</h5>
+                            </div>
+                            <div class="timer-title">
+                                <span class="seconds" id="timer-field">00</span>
+                                <h5>seconds</h5>
+                            </div>
+                        </div>
+                        <div class="stopwatch-buttons">
+                            <button id="start-button">Start</button>
+                            <button id="stop-button">Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="flex-recent-tasks">
+                    <div>
+                    <h1>Recent Tasks</h1>
+                     </div>
+                        <table class="table-recent-tasks">
+                            <tr>
+                                <th>Task Name</th>
+                                <th>Description</th>
+                                <th>Project</th>
+                                <th>Who</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td>Task Alpha</td>
+                                <td>do this do that until it's done and we can finally enjoy our weekend</td>
+                                <td>Project Alpha</td>
+                                <td>Lars, Joel, Nick</td>
+                                <td>15:30:45</td>
+                            </tr>
+                            <tr>
+                                <td>Task Alpha</td>
+                                <td>do this do that until it's done and we can finally enjoy our weekend</td>
+                                <td>Project Alpha</td>
+                                <td>Lars, Joel, Nick</td>
+                                <td>15:30:45</td>
+                            </tr>
+                            <tr>
+                                <td>Task Alpha</td>
+                                <td>do this do that until it's done and we can finally enjoy our weekend</td>
+                                <td>Project Alpha</td>
+                                <td>Lars, Joel, Nick</td>
+                                <td>15:30:45</td>
+                            </tr>
+                            <tr>
+                                <td>Task Alpha</td>
+                                <td>do this do that until it's done and we can finally enjoy our weekend</td>
+                                <td>Project Alpha</td>
+                                <td>Lars, Joel, Nick</td>
+                                <td>15:30:45</td>
+                            </tr>
+                        </table>
                 </div>
         </div>
+
     </main>
 
-      <script src="/JS/sidenav.js"></script>
+    <script src="/JS/sidenav.js"></script>
+    <script src="/JS/timer.js"></script>
 </body>
+
 </html>
