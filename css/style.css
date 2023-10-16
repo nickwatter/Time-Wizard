@@ -1,13 +1,12 @@
-:root {
-  --yellow: #FFCA42;
-  --darkgray: #212121;
-  --lightgray: #E2E2E2;
-  --purple: #3D1B5A;
-  --lightpurple: #867396;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;500;600;700&display=swap');
 
+:root {
+  --yellow: #FFCA42;
+  --darkpurple: #302933;
+  --darkgrey: #79737B;
+  --background: #A9A5AB;
+  --lightgrey: #99949A;
+}
 
 h1 {
   font-family: 'Sarabun', sans-serif;
@@ -15,13 +14,20 @@ h1 {
   font-size: xx-large;
   color: white;
   margin-top: 0;
-  padding-top: 60px;
 }
 
 h2 {
   font-family: 'Sarabun', sans-serif;
   font-weight: 400;
   font-size: x-large;
+  margin: 0 auto;
+}
+
+h5 {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 200;
+  font-size: small;
+  margin: 0;
 }
 
 body {
@@ -44,7 +50,7 @@ body {
   top: 0;
   /* Stay at the top */
   left: 0;
-  background-color: var(--darkgray);
+  background-color: var(--darkpurple);
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -59,7 +65,7 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: var(--darkpurple);
   display: block;
   transition: 0.3s;
 }
@@ -67,6 +73,9 @@ body {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: var(--yellow);
+}
+.sidenav a {
+  color: white
 }
 
 /* Position and style the close button (top right corner) */
@@ -93,7 +102,7 @@ body {
   padding-left: 60px;
   margin-top: 0;
   margin-left: 110px;
-  background-color: var(--purple);
+  background-color: var(--background);
   height: 100vh;
 }
 
@@ -137,6 +146,7 @@ body {
 .grid-wrapper-dashboard {
   width: 80vw;
   margin: 0 auto;
+  padding-top: 60px;
   display: grid;
   grid-row-gap: 5px;
   grid-column-gap: 5px;
@@ -161,7 +171,7 @@ body {
 }
 
 .flex-item-recent-projects {
-  border: 1px solid var(--darkgray);
+  border: 1px solid var(--darkpurple);
   border-radius: 10px;
   width: 15vw;
   height: 15vw;
@@ -185,12 +195,17 @@ body {
 
 /* Timer active tasks */
 .stopwatch-container{
-  border: solid 1px var(--darkgray);
+  background-color: var(--lightgrey);
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .background-stop-watch{
-  color: lightgray;
+  background-color: var(--darkgrey);
+  padding: 0px 10px;
+  border-radius: 10px;
+
 }
 
 .stopwatch-display {
@@ -201,8 +216,14 @@ body {
 }
 
 .timer-title {
+  font-family: 'Sarabun', sans-serif;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+
 }
 
 #timer-field {
@@ -210,13 +231,21 @@ body {
   border: solid 1px white;
   border-radius: 5px;
   color: white;
-  background-color: var(--darkgray);
+  background-color: var(--darkpurple);
   padding: 5px 10px;
+}
+
+.stopwatch-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
 }
 
 #start-button {
   font-family: 'Sarabun', sans-serif;
-  border: solid 1px var(--darkgray);
+  border: solid 1px var(--darkpurple);
   border-radius: 5px;
   color: white;
   background-color: darkseagreen;
@@ -224,9 +253,33 @@ body {
 }
 #stop-button {
   font-family: 'Sarabun', sans-serif;
-  border: solid 1px var(--darkgray);
+  border: solid 1px var(--darkpurple);
   border-radius: 5px;
   color: white;
   background-color: darkred;
   padding: 5px 10px;
+}
+
+/* Table recent Tasks */
+.table-recent-tasks {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: large;
+  background-color: var(--lightgrey);
+  border-radius: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+
+
+td, th {
+  border-collapse: collapse;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--darkgrey);
 }
