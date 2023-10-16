@@ -119,23 +119,25 @@ body{
   #logolighttimewizard{
     padding-bottom: 40px;
   }
+ 
 
-
-/* Grid recent Projects */
-  .grid-container-recent-projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-  column-gap: 20px;
-  width: 50vw;
+/* Flex Recent Projects */
+.flex-recent-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
   
 }
 
-.grid-item-recent-projects {
-  font-family: 'Sarabun', sans-serif;
-  background-color: var(--lightpurple);
+.flex-item-recent-projects{
+  border: 1px solid var(--darkgray);
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1;
-} 
+  width: 15vw;
+  height: 15vw;
+  text-align: center;
+  min-width: 150px;
+  min-height: 150px;
+}
+
