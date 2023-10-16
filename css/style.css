@@ -166,19 +166,21 @@ body {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  text-align: center;
   gap: 20px;
-
 }
 
 .flex-item-recent-projects {
   border: 1px solid var(--darkpurple);
+  background-color: var(--darkpurple);
   border-radius: 10px;
-  width: 15vw;
-  height: 15vw;
+  width: 100%;
   text-align: center;
-  min-width: 150px;
-  min-height: 150px;
+  height: 150px; 
+
 }
+
+
 
 /* flex active tasks */
 .flex-active-tasks {
@@ -197,7 +199,7 @@ body {
 .stopwatch-container{
   background-color: var(--lightgrey);
   border-radius: 10px;
-  padding: 20px 10px;
+  padding: 30px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -212,13 +214,14 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .timer-title {
   font-family: 'Sarabun', sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -228,11 +231,13 @@ body {
 
 #timer-field {
   font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: large;
   border: solid 1px white;
   border-radius: 5px;
   color: white;
   background-color: var(--darkpurple);
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 .stopwatch-buttons{
@@ -245,6 +250,8 @@ body {
 
 #start-button {
   font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: large;
   border: solid 1px var(--darkpurple);
   border-radius: 5px;
   color: white;
@@ -253,6 +260,8 @@ body {
 }
 #stop-button {
   font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: medium;
   border: solid 1px var(--darkpurple);
   border-radius: 5px;
   color: white;
@@ -264,11 +273,12 @@ body {
 .table-recent-tasks {
   font-family: 'Sarabun', sans-serif;
   font-weight: 300;
-  font-size: large;
+  font-size: medium;
   background-color: var(--lightgrey);
   border-radius: 20px;
   border-collapse: collapse;
   width: 100%;
+  margin-top: 0;
 }
 
 
@@ -278,6 +288,7 @@ td, th {
   border-collapse: collapse;
   text-align: left;
   padding: 8px;
+  padding: 10px 20px;
 }
 
 tr:nth-child(even) {
