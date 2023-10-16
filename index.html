@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -83,7 +84,8 @@
                             <button id="stop-button">Stop</button>
                         </div>
                     </div>
-                    <div class="stopwatch-container">
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    <!-- <div class="stopwatch-container">
                         <h2>Task Alpha</h2>
                         <div class="stopwatch-display">
                             <div class="timer-title">
@@ -103,7 +105,7 @@
                             <button id="start-button">Start</button>
                             <button id="stop-button">Stop</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
                 <div class="flex-recent-tasks">
@@ -115,35 +117,30 @@
                                 <th>Task Name</th>
                                 <th>Description</th>
                                 <th>Project</th>
-                                <th>Who</th>
                                 <th>Time</th>
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
                                 <td>do this do that until it's done and we can finally enjoy our weekend</td>
                                 <td>Project Alpha</td>
-                                <td>Lars, Joel, Nick</td>
                                 <td>15:30:45</td>
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
                                 <td>do this do that until it's done and we can finally enjoy our weekend</td>
                                 <td>Project Alpha</td>
-                                <td>Lars, Joel, Nick</td>
                                 <td>15:30:45</td>
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
                                 <td>do this do that until it's done and we can finally enjoy our weekend</td>
                                 <td>Project Alpha</td>
-                                <td>Lars, Joel, Nick</td>
                                 <td>15:30:45</td>
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
                                 <td>do this do that until it's done and we can finally enjoy our weekend</td>
                                 <td>Project Alpha</td>
-                                <td>Lars, Joel, Nick</td>
                                 <td>15:30:45</td>
                             </tr>
                         </table>
@@ -154,6 +151,7 @@
 
     <script src="/JS/sidenav.js"></script>
     <script src="/JS/timer.js"></script>
+    <script src="/JS/piechart.js"></script>
 </body>
 
 </html>

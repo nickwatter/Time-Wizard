@@ -20,7 +20,7 @@ h2 {
   font-family: 'Sarabun', sans-serif;
   font-weight: 400;
   font-size: x-large;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 h5 {
@@ -148,10 +148,10 @@ body {
   margin: 0 auto;
   padding-top: 60px;
   display: grid;
-  grid-row-gap: 5px;
-  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
 }
 
 /* recent projects */
@@ -177,9 +177,9 @@ body {
   width: 100%;
   text-align: center;
   height: 150px; 
-
+  display: flex;
+  justify-content: center;
 }
-
 
 
 /* flex active tasks */
@@ -192,6 +192,7 @@ body {
 
 .flex-recent-tasks {
   grid-area: 2 / 1 / 3 / 2;
+  margin-top: 40px;
   
 }
 
@@ -202,11 +203,16 @@ body {
   padding: 30px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .background-stop-watch{
   background-color: var(--darkgrey);
   padding: 0px 10px;
   border-radius: 10px;
+  margin-top: 40px;
 
 }
 
@@ -267,6 +273,13 @@ body {
   color: white;
   background-color: darkred;
   padding: 5px 10px;
+}
+
+/* Pie Chart */
+#myChart {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  
 }
 
 /* Table recent Tasks */
