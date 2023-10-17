@@ -11,6 +11,9 @@ var barColors = [
 ];
 
 
+// const sum = yValues.reduce((a, b) => a + b, 0);
+// const middleText = `${sum}`;
+
 new Chart("myChart", {
     type: "doughnut",
     data: {
@@ -22,6 +25,7 @@ new Chart("myChart", {
         }]
     },
     options: {
+        cutoutPercentage: 70,
         title: {
             display: false,
             text: "World Wide Wine Production 2018",
@@ -33,7 +37,46 @@ new Chart("myChart", {
                 fontFamily: 'Sarabun',
                 fontSize: 14,
             }
-        }
+        },
     }
 });
+//         plugins: {
+//             datalabels: {
+//                 formatter: function(value, context) {
+//                     return context.chart.data.labels[context.dataIndex];
+//                 },
+//                 color: '#fff',
+//                 font: {
+//                     size: 16,
+//                     weight: 'bold'
+//                 }
+//             },
+//             centerText: {
+//                 display: true,
+//                 text: middleText,
+//                 color: '#000',
+//                 font: {
+//                     size: 20,
+//                     weight: 'bold'
+//                 }
+//             }
+//         }
+//     },
+//     plugins: [{
+//         beforeDraw: function(chart) {
+//             var width = chart.chart.width,
+//                 height = chart.chart.height,
+//                 ctx = chart.chart.ctx;
+//             ctx.restore();
+//             var fontSize = (height / 120).toFixed(2);
+//             ctx.font = fontSize + "em S-serif";
+//             ctx.textBaseline = "middle";
+//             var text = middleText,
+//                 textX = Math.round((width - ctx.measureText(text).width) / 2),
+//                 textY = height / 2;
+//             ctx.fillText(text, textX, textY);
+//             ctx.save();
+//         }
+//     }]
+// });
 
