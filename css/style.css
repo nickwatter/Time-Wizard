@@ -102,8 +102,11 @@ body {
   padding-left: 60px;
   margin-top: 0;
   margin-left: 110px;
+  /* background-color: var(--background);
+  height: 100vh; */
+}
+body {
   background-color: var(--background);
-  height: 100vh;
 }
 
 /* #overlay {
