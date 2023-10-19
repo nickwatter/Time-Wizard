@@ -351,3 +351,21 @@ tr:hover{
   background-color: var(--darkpurple);  
   color: var(--yellow);
 }
+
+
+/* Add Prjoject/Task Button */
+.addbtn{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 500;
+  font-size: large;
+  background-color: var(--purple);
+  border-radius: 20px;
+  border: 0px;
+  padding: 5px 20px 6px 20px;
+  float: right;
+}
+
+.addbtn:hover{
+  background-color: var(--darkpurple);
+  color: var(--yellow);
+}

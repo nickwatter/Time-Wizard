@@ -4,21 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/lars.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="/JS/projects.js"></script>
 
 </head>
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav"><p>Profile</p></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav"><p>Dashboard</p></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav"><p>Projects</p></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav"><p>Tasks</p></div></a>
-        <a href="#"><div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav"><p>Team</p></div></a>
-      </div>
+  <div id="mySidenav" class="sidenav">
+    <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
+    <a href="#">
+        <div class="item">
+            <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
+    </a>
+    <a href="profile.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav">
+            <h2>Profile</h2>
+        </div>
+    </a>
+    <a href="index.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
+            <h2>Dashboard</h2>
+        </div>
+    </a>
+    <a href="projects.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav">
+            <h2>Projects</h2>
+        </div>
+    </a>
+    <a href="tasks.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
+            <h2>Tasks</h2>
+        </div>
+    </a>
+    <a href="tasks.html">
+        <div class="item" id="logoutbtn">
+            <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
+        </div>
+    </a>
 
-      <main id="main">
+    <!-- <a href="#">
+        <div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav">
+            <h2>Team</h2>
+        </div>
+    </a> -->
+</div>
+
+ <main id="main">
 
     <div id="projecttop">
     <h1>Tasks</h1>
@@ -27,15 +61,16 @@
         <!-- <link rel="stylesheet" href="Asstes/Icons/logolupe.png"> -->
 
         <!-- The form -->
-        <div class="box">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Tasks">
+        <div class="search-box">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
           <i class="fas fa-search"></i>
+          <button class="addbtn">Add Task</button>
         </div>
 
       </div>
     </div>
      
-    <table id="myTable">
+    <table class="table-projects">
         <tr class="header">
           <th>Name</th>
           <th>Description</th>
