@@ -67,7 +67,7 @@
             <i class="fas fa-search"></i>
             <!-- <button class="addbtn">Add Task</button> -->
              <!-- Add Project Try 1 -->
-    <button class="addbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Task</button>
+    <button class="addbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
 
     <div id="id01" class="modal">
       
@@ -78,16 +78,16 @@
         </div>
     
         <div class="container">
-          <label for="uname"><b>Project Name</b></label>
-          <input type="text" placeholder="Enter Project Name" name="uname" required>
+          <label for="projectname"><b>Project Name</b></label>
+          <input type="text" placeholder="Enter Project Name" name="projectname" required>
     
-          <label for="psw"><b>Description</b></label>
-          <input type="text" placeholder="Enter Description" name="psw" required>
+          <label for="projectdescription"><b>Description</b></label>
+          <input type="text" placeholder="Enter Description" name="projectdescription" required>
             
-          <button class="addbtn" type="submit">Save</button>
-          <label>
+          <button class="addbtn" id="save-added-project" type="submit">Save</button>
+          <!-- <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
+          </label> -->
         </div>
     
         <!-- <div class="container" style="background-color:#f1f1f1">
