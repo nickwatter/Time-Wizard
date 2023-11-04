@@ -74,30 +74,28 @@
       <form class="modal-content animate" action="/action_page.php" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          <h1 id="add-project-title">ADD PROJECT</h1>
         </div>
     
         <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="uname"><b>Project Name</b></label>
+          <input type="text" placeholder="Enter Project Name" name="uname" required>
     
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Description</b></label>
+          <input type="text" placeholder="Enter Description" name="psw" required>
             
-          <button type="submit">Login</button>
+          <button class="addbtn" type="submit">Save</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
         </div>
     
-        <div class="container" style="background-color:#f1f1f1">
+        <!-- <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
+        </div> -->
       </form>
     </div>
-
-
     <!-- Add Project Try 1 END -->
         </div>
       </div>
