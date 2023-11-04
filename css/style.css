@@ -30,6 +30,12 @@ h5 {
   margin: 0;
 }
 
+p {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+}
+
 body {
   margin: 0;
 }
@@ -366,6 +372,30 @@ tr:hover{
 }
 
 .addbtn:hover{
+  background-color: var(--darkpurple);
+  color: var(--yellow);
+}
+
+
+/* Prijects Page */
+.projects-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap: 30px;
+}
+.projects-grid-item {
+  background-color: var(--purple);
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-family: 'Sarabun', sans-serif;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.projects-grid-item:hover {
   background-color: var(--darkpurple);
   color: var(--yellow);
 }
