@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="/JS/projects.js"></script>
     <script src="/JS/addtask.js"></script>
+    <script src="/JS/delete-task.js"></script>
 
 </head>
 <body>
@@ -121,12 +122,14 @@
           <th>Description</th>
           <th>Assigned</th>
           <th>Time</th>
+          <th>Delete</th>
         </tr>
         <tr>
           <td>Project xxy</td>
           <td>very very hard</td>
           <td>Lars</td>
           <td>00:00</td>
+          <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
         </tr>
         <tr>
             <td>Project Alpha</td>
@@ -269,6 +272,18 @@
           </tr>
           
       </table>
+      <div id="delete-task" class="modal">
+               
+        <form class="modal-content-delete-task animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('delete-task').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h1 id="add-project-title">ARE YOU SURE?</h1>
+            <p>You are about to delete the selected listing.</p>
+            <div class="button-delete-task">
+              <button class="no-yes-button">NO</button>
+              <button class="no-yes-button">YES</button>
+            </div>
+          </div>
       </main>
       <script src="/JS/sidenav.js"></script>
 
