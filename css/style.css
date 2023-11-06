@@ -405,14 +405,6 @@ tr:hover{
 }
 
 /* ADD PROJECT/TASK */
-/* input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-} */
 
 #input-task-project{
   width: 30%;
@@ -432,17 +424,6 @@ width: 30%;
 padding: 12px 20px;
 border-radius: 10px;
 }
-
-/* Set a style for all buttons */
-/* button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-} */
 
 
 
@@ -619,9 +600,38 @@ gap: 20px;
 /* Overview Project END*/
 
 /* Open task START */
-
-
-
-
-
+#open-task-title{
+  color: black;
+  align-self: left;
+}
+.modal-content-open-task{
+  font-family: 'Sarabun', sans-serif;
+  background-color: white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid black;
+  width: 90%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+  padding-bottom: 60px;
+  }
+  
+  #open-task-popup:hover{
+    cursor: pointer;
+  }
+  .imgcontainer-open-task {
+    text-align: left;
+    padding-left: 20px;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  .column-task-time:hover{
+    background-color: none;
+    color: var(--yellow);
+  }
+  .table-task-time:hover{
+    background-color: none;
+  }
+.open-task.flex{
+  display: flex;
+  flex-direction: column;
+}
 /* Open task END */
