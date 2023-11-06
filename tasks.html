@@ -78,12 +78,25 @@
                  </div>
              
                  <div class="container">
-                   <label for="projectname"><b>Task Name</b></label>
-                   <input type="text" placeholder="Enter Task Name" name="projectname" required>
-             
-                   <label for="projectdescription"><b>Description</b></label>
-                   <input type="text" placeholder="Enter Description" name="projectdescription" required>
-                     
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectname"><b>Task Name</b></label>
+                    <input id="input-task-project" type="text" placeholder="Enter Task Name" name="projectname" required>
+                  </div>
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectdescription"><b>Description</b></label>
+                    <input id="input-task-project" type="text" placeholder="Enter Description" name="projectdescription" required>
+                  </div>  
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="cars"><b>Chose Project</b></label>
+                    <select id="input-task-project" name="choseproject">
+                      <option value="Project 1">Project 1</option>
+                      <option value="Project 2">Project 2</option>
+                      <option value="Project 3">Project 3</option>
+                      <option value="Project 4">Project 4</option>
+                    </select>
+                  </div>  
+
+                  
                    <button class="addbtn" id="save-added-project" type="submit">Save</button>
                    <!-- <label>
                      <input type="checkbox" checked="checked" name="remember"> Remember me

@@ -402,13 +402,32 @@ tr:hover{
 }
 
 /* ADD PROJECT/TASK */
-input[type=text], input[type=password] {
+/* input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+} */
+
+#input-task-project{
+  width: 30%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--darkpurple);
+  color: white;
+  box-sizing: border-box;
+  border: none;
+
+}
+#label-task-project{
+background-color: var(--lightgrey);
+width: 30%;
+padding: 12px 20px;
+border-radius: 10px;
 }
 
 /* Set a style for all buttons */
@@ -444,6 +463,12 @@ input[type=text], input[type=password] {
 
 .container {
   padding: 16px;
+}
+.container-add-task-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 span.psw {
