@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="/JS/projects.js"></script>
+    <script src="/JS/addtask.js"></script>
+
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
+    <a href="#">
+        <div class="item">
+            <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
+    </a>
+    <a href="profile.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav">
+            <h2>Profile</h2>
+        </div>
+    </a>
+    <a href="index.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
+            <h2>Dashboard</h2>
+        </div>
+    </a>
+    <a href="projects.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav">
+            <h2>Projects</h2>
+        </div>
+    </a>
+    <a href="tasks.html">
+        <div class="item">
+            <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
+            <h2>Tasks</h2>
+        </div>
+    </a>
+    <a href="tasks.html">
+        <div class="item" id="logoutbtn">
+            <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
+        </div>
+    </a>
+
+    <!-- <a href="#">
+        <div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav">
+            <h2>Team</h2>
+        </div>
+    </a> -->
+</div>
+
+ <main id="main">
+
+    <div id="projecttop">
+      <h1>Profile</h1>
+      <div>
+        <div>
+          <img src="Asstes/Icons/avatar.webp" alt="Avatar" class="profile-picture">
+          <form action="">
+            <div>
+              <label id="label-task-project" for="e-mail">E-mail</label>
+              <input id="input-task-project" type="email" placeholder="max.mustermann@gmail.com">
+          </div>
+          <div>
+            <label id="label-task-project" for="psw">Password</label>
+            <input id="input-task-project" type="password" >
+        </div>
+          </form>
+        </div>
+             <!-- Add Project Try 1 -->
+             <button class="addbtn" id="edit-profile" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Edit Profile</button>
+
+             <div id="id01" class="modal">
+               
+               <form class="modal-content animate" action="/action_page.php" method="post">
+                 <div class="imgcontainer">
+                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                   <h1 id="add-project-title">ADD TASK</h1>
+                 </div>
+             
+                 <div class="container">
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectname"><b>Current E-Mail</b></label>
+                    <input id="input-task-project" type="email" placeholder="" name="projectname" required>
+                  </div>
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectdescription"><b>Current Password</b></label>
+                    <input id="input-task-project" type="password" placeholder="Enter current Password" name="projectdescription" required>
+                  </div>  
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectdescription"><b>New Password</b></label>
+                    <input id="input-task-project" type="password" placeholder="Enter current Password" name="projectdescription" required>
+                  </div> 
+                  <div class="container-add-task-project">
+                    <label id="label-task-project" for="projectdescription"><b>Confirm new Password</b></label>
+                    <input id="input-task-project" type="password" placeholder="Enter current Password" name="projectdescription" required>
+                  </div> 
+
+                  
+                   <button class="addbtn" id="save-added-project" type="submit">Save</button>
+                   <!-- <label>
+                     <input type="checkbox" checked="checked" name="remember"> Remember me
+                   </label> -->
+                 </div>
+             
+                 <!-- <div class="container" style="background-color:#f1f1f1">
+                   <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                   <span class="psw">Forgot <a href="#">password?</a></span>
+                 </div> -->
+               </form>
+             </div>
+             <!-- Add Project Try 1 END -->
+          </div>
+      </div>
+    </div>
+            
+   </main>
+      <script src="/JS/sidenav.js"></script>
+
+
+</body>
+</html>

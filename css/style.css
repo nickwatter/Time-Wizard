@@ -544,3 +544,19 @@ span.psw {
      width: 100%;
   }
 }
+
+
+/* Profile Page */
+.profile-picture {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+#edit-profile {
+  float: left;
+}
+
+
+
+/* Profile Page END */
