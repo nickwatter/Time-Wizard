@@ -8,6 +8,7 @@
     <script src="/JS/projects.js"></script>
     <script src="/JS/addtask.js"></script>
     <script src="/JS/delete-task.js"></script>
+    <script src="/JS/open-task.js"></script>
 
 </head>
 <body>
@@ -125,7 +126,7 @@
           <th>Delete</th>
         </tr>
         <tr>
-          <td>Project xxy</td>
+          <td id="open-task" onclick="document.getElementById('open-task').style.display='block'">Task xxy</td>
           <td>very very hard</td>
           <td>Lars</td>
           <td>00:00</td>
@@ -272,6 +273,7 @@
           </tr>
           
       </table>
+      <!-- Delete Task Popup START -->
       <div id="delete-task" class="modal">
                
         <form class="modal-content-delete-task animate" action="/action_page.php" method="post">
@@ -284,6 +286,17 @@
               <button class="no-yes-button">YES</button>
             </div>
           </div>
+          <!-- Delete Task Popup END -->
+          <!-- Open Task Popup START -->
+          <div id="open-task" class="modal">
+               
+            <form class="modal-content-delete-task animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('open-task').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h1 id="open-task-title">TASK XY</h1>
+                <p>You are about to delete the selected listing.</p>
+          </div>
+          <!-- Open Task Popup END -->
       </main>
       <script src="/JS/sidenav.js"></script>
 
