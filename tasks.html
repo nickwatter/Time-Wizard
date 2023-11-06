@@ -298,49 +298,48 @@
                 <p>Current Project</p>
                 <h1 id="open-task-title">Task XY</h1>
                 <p>Description of Task</p>
-                <div>
-                  <div class="open-task-flex">
-                    <table class="table-projects">
-                        <tr class="header">
-                          <th>Date</th>
-                          <th>Time</th>
-                          <th>Delete</th>
-                        </tr>
-                        <tr>
-                          <td>Date</td>
-                          <td>Time</td>
-                          <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
-                        </tr>
-                      </table>
-                  </div>
-                  <div class="flex-active-tasks">
-                    <h1>Overview</h1>
-                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                    <h1>Active Tasks</h1>
-                    <div class="background-stop-watch">
-                        <div class="stopwatch-container">
-                            <h2>Task Alpha</h2>
-                            <div class="stopwatch-display">
-                                <div class="timer-title">
-                                    <span class="hours" id="timer-field">00</span>
-                                    <h5>hours</h5>
-                                </div>
-                                <div class="timer-title">
-                                    <span class="minutes" id="timer-field">00</span>
-                                    <h5>munites</h5>
-                                </div>
-                                <div class="timer-title">
-                                    <span class="seconds" id="timer-field">00</span>
-                                    <h5>seconds</h5>
-                                </div>
+              </div>
+              <div class="open-task-flex">
+                <table class="table-projects">
+                    <tr class="header">
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Delete</th>
+                    </tr>
+                    <tr>
+                      <td>Date</td>
+                      <td>Time</td>
+                      <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+                    </tr>
+                  </table>
+
+
+                  
+                  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                <h1>Active Tasks</h1>
+                <div class="background-stop-watch">
+                    <div class="stopwatch-container">
+                        <h2>Task Alpha</h2>
+                        <div class="stopwatch-display">
+                            <div class="timer-title">
+                                <span class="hours" id="timer-field">00</span>
+                                <h5>hours</h5>
                             </div>
-                            <div class="stopwatch-buttons">
-                                <button id="start-button">Start</button>
-                                <button id="stop-button">Stop</button>
+                            <div class="timer-title">
+                                <span class="minutes" id="timer-field">00</span>
+                                <h5>munites</h5>
+                            </div>
+                            <div class="timer-title">
+                                <span class="seconds" id="timer-field">00</span>
+                                <h5>seconds</h5>
                             </div>
                         </div>
-               </div>
+                        <div class="stopwatch-buttons">
+                            <button id="start-button">Start</button>
+                            <button id="stop-button">Stop</button>
+                        </div>
               </div>
+              
             </div>
           </div>
           <!-- Open Task Popup END -->

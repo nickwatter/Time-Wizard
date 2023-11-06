@@ -630,8 +630,8 @@ gap: 20px;
   .table-task-time:hover{
     background-color: none;
   }
-.open-task.flex{
-  display: flex;
-  flex-direction: column;
+.open-task-flex{
+display: flex;
+flex-direction: row;
 }
 /* Open task END */
