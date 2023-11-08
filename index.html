@@ -13,34 +13,44 @@
     <div id="mySidenav" class="sidenav">
         <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
         <a href="#">
-            <div class="item"><img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"
-                    class="imgsidenav"></div>
+            <div class="item">
+                <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
         </a>
-        <a href="#">
-            <div class="item"><img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav">
+        <a href="profile.html">
+            <div class="item">
+                <img src="/Asstes/Icons/whiteprofil.png" alt="Profil" class="imgsidenav">
                 <h2>Profile</h2>
             </div>
         </a>
-        <a href="#">
-            <div class="item"><img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
+        <a href="index.html">
+            <div class="item">
+                <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
                 <h2>Dashboard</h2>
             </div>
         </a>
-        <a href="#">
-            <div class="item"><img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav">
+        <a href="projects.html">
+            <div class="item">
+                <img src="/Asstes/Icons/whiteprojects.png" alt="Projects" class="imgsidenav">
                 <h2>Projects</h2>
             </div>
         </a>
-        <a href="#">
-            <div class="item"><img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
+        <a href="tasks.html">
+            <div class="item">
+                <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
                 <h2>Tasks</h2>
             </div>
         </a>
-        <a href="#">
+        <a href="tasks.html">
+            <div class="item" id="logoutbtn">
+                <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
+            </div>
+        </a>
+
+        <!-- <a href="#">
             <div class="item"><img src="/Asstes/Icons/whiteteam.png" alt="Team" class="imgsidenav">
                 <h2>Team</h2>
             </div>
-        </a>
+        </a> -->
     </div>
 
     <div id="overlay"></div>
@@ -119,12 +129,15 @@
                                 <th>Description</th>
                                 <th>Project</th>
                                 <th>Time</th>
+                                <th>Delete</th>
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
                                 <td>do this do that until it's done and we can finally enjoy our weekend</td>
                                 <td>Project Alpha</td>
                                 <td>15:30:45</td>
+                                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+
                             </tr>
                             <tr>
                                 <td>Task Alpha</td>
@@ -171,12 +184,25 @@
                         </table>
                 </div>
         </div>
+        <div id="delete-task" class="modal">
+               
+            <form class="modal-content-delete-task animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('delete-task').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h1 id="add-project-title">ARE YOU SURE?</h1>
+                <p>You are about to delete the selected listing.</p>
+                <div class="button-delete-task">
+                  <button class="no-yes-button">NO</button>
+                  <button class="no-yes-button">YES</button>
+                </div>
+              </div>
 
     </main>
 
     <script src="/JS/sidenav.js"></script>
     <script src="/JS/timer.js"></script>
     <script src="/JS/piechart.js"></script>
+    <script src="/JS/delete-task.js"></script>
 </body>
 
 </html>

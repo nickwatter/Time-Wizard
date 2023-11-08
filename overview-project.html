@@ -8,7 +8,7 @@
     <script src="/JS/projects.js"></script>
     <script src="/JS/addtask.js"></script>
     <script src="/JS/delete-task.js"></script>
-    <script src="JS/open-task.js"></script>
+
 
 </head>
 <body>
@@ -58,7 +58,7 @@
  <main id="main">
 
     <div id="projecttop">
-      <h1>Tasks</h1>
+      <h1>Overview - Project XY</h1>
       <div>
         <!-- Load icon library -->
         <!-- <link rel="stylesheet" href="Asstes/Icons/logolupe.png"> -->
@@ -126,7 +126,7 @@
           <th>Delete</th>
         </tr>
         <tr>
-          <td id="open-task-popup" onclick="document.getElementById('open-task').style.display='block'">Task xxy</td>
+          <td>Project xxy</td>
           <td>very very hard</td>
           <td>Lars</td>
           <td>00:00</td>
@@ -273,10 +273,10 @@
           </tr>
           
       </table>
-      <!-- Delete Task Popup START -->
+
       <div id="delete-task" class="modal">
                
-        <div class="modal-content-delete-task animate">
+        <form class="modal-content-delete-task animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
             <span onclick="document.getElementById('delete-task').style.display='none'" class="close" title="Close Modal">&times;</span>
             <h1 id="add-project-title">ARE YOU SURE?</h1>
@@ -286,66 +286,9 @@
               <button class="no-yes-button">YES</button>
             </div>
           </div>
-        </div>
-          </div>
-          <!-- Delete Task Popup END -->
-          <!-- Open Task Popup START -->
-          <div id="open-task" class="modal">
-               
-            <div class="modal-content-open-task animate">
-              <div class="imgcontainer-open-task">
-                <span onclick="document.getElementById('open-task').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <p>Current Project</p>
-                <h1 id="open-task-title">Task XY</h1>
-                <p>Description of Task</p>
-              </div>
-              <div class="open-task-flex">
-                <table class="table-projects">
-                    <tr class="header">
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Delete</th>
-                    </tr>
-                    <tr>
-                      <td>Date</td>
-                      <td>Time</td>
-                      <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
-                    </tr>
-                  </table>
-
-
-                  
-                  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                <h1>Active Tasks</h1>
-                <div class="background-stop-watch">
-                    <div class="stopwatch-container">
-                        <h2>Task Alpha</h2>
-                        <div class="stopwatch-display">
-                            <div class="timer-title">
-                                <span class="hours" id="timer-field">00</span>
-                                <h5>hours</h5>
-                            </div>
-                            <div class="timer-title">
-                                <span class="minutes" id="timer-field">00</span>
-                                <h5>munites</h5>
-                            </div>
-                            <div class="timer-title">
-                                <span class="seconds" id="timer-field">00</span>
-                                <h5>seconds</h5>
-                            </div>
-                        </div>
-                        <div class="stopwatch-buttons">
-                            <button id="start-button">Start</button>
-                            <button id="stop-button">Stop</button>
-                        </div>
-              </div>
-              
-            </div>
-          </div>
-          <!-- Open Task Popup END -->
+      
       </main>
       <script src="/JS/sidenav.js"></script>
-      <script src="/JS/timer.js"></script>
 
 
 </body>
