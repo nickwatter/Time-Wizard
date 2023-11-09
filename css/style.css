@@ -104,7 +104,7 @@ body {
 
 
 #logoutbtn {
-  margin-top: 150px;
+  margin-top: 350px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -173,11 +173,12 @@ body {
 /* recent projects */
 .recent-projects {
   grid-area: 1 / 1 / 2 / 2;
+  color: white;
 }
 
 
 /* Flex Recent Projects */
-.flex-recent-projects {
+#flex-recent-projects {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -230,6 +231,7 @@ body {
   padding: 0px 10px;
   border-radius: 10px;
   margin-top: 0px;
+  align-self: start;
 
 }
 
@@ -321,12 +323,11 @@ body {
 
 
 /* Table Design */
-.table-recent-tasks {
+#table-recent-tasks {
   font-family: 'Sarabun', sans-serif;
   font-weight: 300;
   font-size: medium;
   background-color: var(--lightgrey);
-  border-radius: 20px;
   border-collapse: collapse;
   width: 100%;
   margin-top: 0;
@@ -337,7 +338,11 @@ td, th {
   padding: 10px 20px;
 }
 
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
+  background-color: var(--darkgrey);
+}
+
+thead tr {
   background-color: var(--darkgrey);
 }
 
@@ -350,10 +355,19 @@ tr:nth-child(even) {
   width: 100%;
   text-align: left;
   background-color: var(--lightgrey);
-  border-radius: 20px;
 }
 
-tr:hover{
+.table-tasks {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  background-color: var(--lightgrey);
+}
+
+tbody tr:hover{
   background-color: var(--darkpurple);  
   color: var(--yellow);
 }
@@ -406,7 +420,7 @@ tr:hover{
 
 /* ADD PROJECT/TASK */
 
-#input-task-project{
+.input-task-project{
   width: 30%;
   padding: 14px 20px;
   margin: 8px 0;
@@ -418,7 +432,7 @@ tr:hover{
   border: none;
 
 }
-#label-task-project{
+.label-task-project{
 background-color: var(--lightgrey);
 width: 30%;
 padding: 12px 20px;
@@ -562,13 +576,13 @@ border-radius: 20px;
 padding-bottom: 60px;
 }
 
-#delete-task-popup{
+.delete-task{
   width: 20px;
   height: inherit;
   padding: 2px 2px;
   border-radius: 5px;
 }
-#delete-task-popup:hover{
+.delete-task:hover{
   cursor: pointer;
   background-color: var(--yellow);
 }
@@ -633,5 +647,46 @@ gap: 20px;
 .open-task-flex{
 display: flex;
 flex-direction: row;
+justify-content: space-evenly;
 }
+
+.table-open-task{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  border-collapse: collapse;
+  width: 50%;;
+  text-align: left;
+  background-color: var(--lightgrey);;
+  align-self: start;
+}
+
 /* Open task END */
+
+
+/* BACKEND EDIT START */
+
+.input-profile{
+  width: 30%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--darkpurple);
+  color: white;
+  box-sizing: border-box;
+  border: none;
+
+}
+.label-profile{
+background-color: var(--lightgrey);
+width: 30%;
+padding: 12px 20px;
+border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BACKEND EDIT END */

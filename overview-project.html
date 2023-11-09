@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="/JS/projects.js"></script>
     <script src="/JS/addtask.js"></script>
     <script src="/JS/delete-task.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
 
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
     <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
-    <a href="#">
+    <a href="./dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
     </a>
@@ -24,7 +25,7 @@
             <h2>Profile</h2>
         </div>
     </a>
-    <a href="index.html">
+    <a href="dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
             <h2>Dashboard</h2>
@@ -36,13 +37,7 @@
             <h2>Projects</h2>
         </div>
     </a>
-    <a href="tasks.html">
-        <div class="item">
-            <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
-            <h2>Tasks</h2>
-        </div>
-    </a>
-    <a href="tasks.html">
+    <a href="javascript:void(0)">
         <div class="item" id="logoutbtn">
             <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
         </div>
@@ -58,7 +53,7 @@
  <main id="main">
 
     <div id="projecttop">
-      <h1>Overview - Project XY</h1>
+      <h1 id="project-title">Overview - Project 1</h1>
       <div>
         <!-- Load icon library -->
         <!-- <link rel="stylesheet" href="Asstes/Icons/logolupe.png"> -->
@@ -73,7 +68,7 @@
 
              <div id="id01" class="modal">
                
-               <form class="modal-content animate" action="/action_page.php" method="post">
+               <form class="modal-content animate">
                  <div class="imgcontainer">
                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                    <h1 id="add-project-title">ADD TASK</h1>
@@ -81,25 +76,16 @@
              
                  <div class="container">
                   <div class="container-add-task-project">
-                    <label id="label-task-project" for="projectname"><b>Task Name</b></label>
-                    <input id="input-task-project" type="text" placeholder="Enter Task Name" name="projectname" required>
+                    <label class="label-task-project" for="projectname"><b>Task Name</b></label>
+                    <input id="taskname" class="input-task-project" type="text" placeholder="Enter Task Name" name="projectname" required>
                   </div>
                   <div class="container-add-task-project">
-                    <label id="label-task-project" for="projectdescription"><b>Description</b></label>
-                    <input id="input-task-project" type="text" placeholder="Enter Description" name="projectdescription" required>
-                  </div>  
-                  <div class="container-add-task-project">
-                    <label id="label-task-project" for="cars"><b>Chose Project</b></label>
-                    <select id="input-task-project" name="choseproject">
-                      <option value="Project 1">Project 1</option>
-                      <option value="Project 2">Project 2</option>
-                      <option value="Project 3">Project 3</option>
-                      <option value="Project 4">Project 4</option>
-                    </select>
+                    <label class="label-task-project" for="projectdescription"><b>Description</b></label>
+                    <input id="taskdescription" class="input-task-project" type="text" placeholder="Enter Description" name="projectdescription" required>
                   </div>  
 
                   
-                   <button class="addbtn" id="save-added-project" type="submit">Save</button>
+                   <button id="savebtn" class="addbtn" id="save-added-project" type="submit">Save</button>
                    <!-- <label>
                      <input type="checkbox" checked="checked" name="remember"> Remember me
                    </label> -->
@@ -115,163 +101,117 @@
           </div>
       </div>
     </div>
+
+    <!-- Open Task Popup START -->
+    <div id="open-task" class="modal" style="position: fixed;">
+               
+      <div class="modal-content-open-task animate">
+        <div class="imgcontainer-open-task">
+          <span onclick="document.getElementById('open-task').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <p id="current-project">Current Project</p>
+          <h1 id="open-task-title">Task XY</h1>
+          <p id="current-task-description">Description of Task</p>
+        </div>
+        <div class="open-task-flex">
+          <table class="table-open-task">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Date</th>
+                <th style="width: 25%;">Start Time</th>
+                <th style="width: 25%;">End Time</th>
+                <th style="width: 10%;">Duration</th>
+                <th style="width: 5%;"></th>
+              </tr>
+            </thead>
+            <tbody id="task-times">
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>Time</td>
+                <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
+              </tr>
+            </tbody>
+            </table>
+
+
+          <div class="background-stop-watch">
+              <div class="stopwatch-container">
+                  <div class="stopwatch-display">
+                    <span id="task-id-storage" style="display: none;"></span>
+                      <div class="timer-title">
+                          <span class="hours" id="timer-field">00</span>
+                          <h5>hours</h5>
+                      </div>
+                      <div class="timer-title">
+                          <span class="minutes" id="timer-field">00</span>
+                          <h5>minutes</h5>
+                      </div>
+                      <div class="timer-title">
+                        <span class="seconds" id="timer-field">00</span>
+                        <h5>seconds</h5>
+                    </div>
+                  </div>
+                  <div class="stopwatch-buttons">
+                      <button id="start-button">Start</button>
+                      <button id="stop-button" class="hidden">Stop</button>
+                  </div>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- Open Task Popup END -->
+
+    
             
      
     <table class="table-projects">
+      <thead>
         <tr class="header">
-          <th>Name</th>
-          <th>Description</th>
-          <th>Assigned</th>
-          <th>Time</th>
-          <th>Delete</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+          <th style="width: 10%;">Time</th>
+          <th style="width: 5%;"></th>
         </tr>
-        <tr>
+      </thead>
+        <tbody id="tasks-table">
+        <!-- <tr>
           <td>Project xxy</td>
           <td>very very hard</td>
-          <td>Lars</td>
           <td>00:00</td>
           <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
-        </tr>
-        <tr>
-            <td>Project Alpha</td>
-            <td>Intermediate</td>
-            <td>John</td>
-            <td>03:15</td>
-          </tr>
-          
-          <tr>
-            <td>Project Beta</td>
-            <td>Easy</td>
-            <td>Susan</td>
-            <td>08:45</td>
-          </tr>
-          
-          <tr>
-            <td>Project Delta</td>
-            <td>Challenging</td>
-            <td>David</td>
-            <td>12:30</td>
-          </tr>
-          
-          <tr>
-            <td>Project Gamma</td>
-            <td>Very Hard</td>
-            <td>Linda</td>
-            <td>17:20</td>
-          </tr>
-          
-          <tr>
-            <td>Project Zeta</td>
-            <td>Moderate</td>
-            <td>Chris</td>
-            <td>09:10</td>
-          </tr>
-          
-          <tr>
-            <td>Project Epsilon</td>
-            <td>Demanding</td>
-            <td>Mary</td>
-            <td>14:55</td>
-          </tr>
-          
-          <tr>
-            <td>Project Omega</td>
-            <td>Tricky</td>
-            <td>Michael</td>
-            <td>10:40</td>
-          </tr>
-          
-          <tr>
-            <td>Project Sigma</td>
-            <td>Complex</td>
-            <td>Sarah</td>
-            <td>06:25</td>
-          </tr>
-          
-          <tr>
-            <td>Project Kappa</td>
-            <td>Difficult</td>
-            <td>Robert</td>
-            <td>21:05</td>
-          </tr>
-          
-          <tr>
-            <td>Project Theta</td>
-            <td>Huge Challenge</td>
-            <td>Alice</td>
-            <td>02:50</td>
-          </tr>
-          
-          <tr>
-            <td>Project Iota</td>
-            <td>Puzzling</td>
-            <td>Kevin</td>
-            <td>16:15</td>
-          </tr>
-          
-          <tr>
-            <td>Project Lambda</td>
-            <td>Intense</td>
-            <td>Jennifer</td>
-            <td>07:30</td>
-          </tr>
-          
-          <tr>
-            <td>Project Nu</td>
-            <td>Herculean</td>
-            <td>Mark</td>
-            <td>19:45</td>
-          </tr>
-          
-          <tr>
-            <td>Project Phi</td>
-            <td>Exhausting</td>
-            <td>Laura</td>
-            <td>23:59</td>
-          </tr>
-          
-          <tr>
-            <td>Project Rho</td>
-            <td>Fierce</td>
-            <td>Daniel</td>
-            <td>04:35</td>
-          </tr>
-          
-          <tr>
-            <td>Project Tau</td>
-            <td>Grueling</td>
-            <td>Karen</td>
-            <td>11:20</td>
-          </tr>
-          
-          <tr>
-            <td>Project Mu</td>
-            <td>Tough</td>
-            <td>Steven</td>
-            <td>13:05</td>
-          </tr>
-          
-          <tr>
-            <td>Project Omicron</td>
-            <td>Formidable</td>
-            <td>Patricia</td>
-            <td>18:50</td>
-          </tr>
-          
-          <tr>
-            <td>Project Chi</td>
-            <td>Daunting</td>
-            <td>Richard</td>
-            <td>05:45</td>
-          </tr>
-          
-          <tr>
-            <td>Project Psi</td>
-            <td>Gargantuan</td>
-            <td>Emily</td>
-            <td>22:30</td>
-          </tr>
-          
+        </tr> -->
+        </tbody>
       </table>
 
       <div id="delete-task" class="modal">
@@ -289,7 +229,11 @@
       
       </main>
       <script src="/JS/sidenav.js"></script>
+      <script src="/JS/tableFilterEngine.js"></script>
 
+      <script type="module" src="./JS/supabase.js"></script>
+      <script type="module" src="./JS/logout.js"></script>
+      <script type="module" src="./JS/overview-project.js"></script>
 
 </body>
 </html>

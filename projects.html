@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="/JS/projects.js"></script>
-    <script src="/JS/addproject.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
     <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
-    <a href="#">
+    <a href="./dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
     </a>
@@ -22,7 +22,7 @@
             <h2>Profile</h2>
         </div>
     </a>
-    <a href="index.html">
+    <a href="dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
             <h2>Dashboard</h2>
@@ -34,13 +34,7 @@
             <h2>Projects</h2>
         </div>
     </a>
-    <a href="tasks.html">
-        <div class="item">
-            <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
-            <h2>Tasks</h2>
-        </div>
-    </a>
-    <a href="tasks.html">
+    <a href="javascript:void(0)">
         <div class="item" id="logoutbtn">
             <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
         </div>
@@ -71,7 +65,7 @@
 
     <div id="id01" class="modal">
       
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <h1 id="add-project-title">ADD PROJECT</h1>
@@ -79,12 +73,12 @@
     
         <div class="container">
           <div class="container-add-task-project">
-            <label id="label-task-project" for="projectname"><b>Project Name</b></label>
-            <input id="input-task-project" type="text" placeholder="Enter Project Name" name="projectname" required>
+            <label class="label-task-project" for="projectname"><b>Project Name</b></label>
+            <input id="projectname" class="input-task-project" type="text" placeholder="Enter Project Name" name="projectname" required>
           </div>
           <div class="container-add-task-project">
-            <label id="label-task-project" for="projectdescription"><b>Description</b></label>
-            <input id="input-task-project" type="text" placeholder="Enter Description" name="projectdescription" required>
+            <label class="label-task-project" for="projectdescription"><b>Description</b></label>
+            <input id="projectdescription" class="input-task-project" type="text" placeholder="Enter Description" name="projectdescription" required>
           </div>  
            <button class="addbtn" id="save-added-project" type="submit">Save</button>
            <!-- <label>
@@ -104,23 +98,21 @@
     </div>
 
     <div class="projects-grid">
-      <a class="link-to-overview-project" href="overview-project.html">
-      <div class="projects-grid-item">Project 1<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-    </a>
+      <!-- <div class="projects-grid-item">Project 1<div class="projects-grid-item-desctription"><p>Description</p></div></div>
       <div class="projects-grid-item">Project 2<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 3<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 4<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 5<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 6<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 7<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 8<div class="projects-grid-item-desctription"><p>Description</p></div></div>
-      <div class="projects-grid-item">Project 9<div class="projects-grid-item-desctription"><p>Description</p></div></div>
+      <div class="projects-grid-item">Project 3<div class="projects-grid-item-desctription"><p>Description</p></div></div> -->
     </div>
 
 
    
       </main>
       <script src="/JS/sidenav.js"></script>
+      <script src="/JS/filter-projects.js"></script>
+      <script src="/JS/addproject.js"></script>
+
+      <script type="module" src="./JS/supabase.js"></script>
+      <script type="module" src="./JS/projects.js"></script>
+      <script type="module" src="./JS/logout.js"></script>
 
 
 </body>

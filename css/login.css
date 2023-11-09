@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #302933;
+}
+
+h1{
+    color: #302933;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.login {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    max-width: 600px;
+    border-color: white;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 20px rgba(0,0,0,0.3);
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.login form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    /* display: flex;
+    justify-content: center; */
+    width: 60%; /* Full-width */
+    text-align: center;
+    background-color: #A9A5AB;
+    font-size: 16px; /* Increase font-size */
+    padding: 10px 5px; /* Add some padding */
+    border: 1px solid white; /* Add a grey border */
+    margin-bottom: 30px; /*Add some space below the input */
+    border-radius: 35px;
+    color: white;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  /* Add Prjoject/Task Button */
+#login-btn{
+    display: flex;
+    text-align: center;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 500;
+    font-size: large;
+    color: white;
+    background-color: var(--purple);
+    border-radius: 20px;
+    border: 0px;
+    padding: 10px 20px 10px 20px;
+
+  }
+  
+  #login-btn:hover{
+    background-color: var(--darkpurple);
+    color: var(--yellow);
+  }

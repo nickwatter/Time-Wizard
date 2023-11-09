@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="/JS/projects.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
     <script src="/JS/addtask.js"></script>
     <script src="/JS/delete-task.js"></script>
     <script src="JS/open-task.js"></script>
@@ -14,7 +16,7 @@
 <body>
   <div id="mySidenav" class="sidenav">
     <!-- <a href="javascript:void(0)" class="closebtn">&times;</a>  -->
-    <a href="#">
+    <a href="./dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/logolighttimewizard.png" alt="Logo" id="logolighttimewizard"class="imgsidenav"></div>
     </a>
@@ -24,7 +26,7 @@
             <h2>Profile</h2>
         </div>
     </a>
-    <a href="index.html">
+    <a href="dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
             <h2>Dashboard</h2>
@@ -42,7 +44,7 @@
             <h2>Tasks</h2>
         </div>
     </a>
-    <a href="tasks.html">
+    <a href="javascript:void(0)">
         <div class="item" id="logoutbtn">
             <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
         </div>
@@ -117,16 +119,19 @@
     </div>
             
      
-    <table class="table-projects">
+    <table class="table-tasks">
         <tr class="header">
+          <thead>
           <th>Name</th>
           <th>Description</th>
           <th>Assigned</th>
           <th>Time</th>
           <th>Delete</th>
+        </thead>
         </tr>
-        <tr>
-          <td id="open-task-popup" onclick="document.getElementById('open-task').style.display='block'">Task xxy</td>
+        <tbody class="table-body">
+        <tr id="open-task-popup" onclick="document.getElementById('open-task').style.display='block'">
+          <td>Task xxy</td>
           <td>very very hard</td>
           <td>Lars</td>
           <td>00:00</td>
@@ -137,6 +142,7 @@
             <td>Intermediate</td>
             <td>John</td>
             <td>03:15</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -144,6 +150,7 @@
             <td>Easy</td>
             <td>Susan</td>
             <td>08:45</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -151,6 +158,7 @@
             <td>Challenging</td>
             <td>David</td>
             <td>12:30</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -158,6 +166,7 @@
             <td>Very Hard</td>
             <td>Linda</td>
             <td>17:20</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -165,6 +174,7 @@
             <td>Moderate</td>
             <td>Chris</td>
             <td>09:10</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -172,6 +182,7 @@
             <td>Demanding</td>
             <td>Mary</td>
             <td>14:55</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -179,6 +190,7 @@
             <td>Tricky</td>
             <td>Michael</td>
             <td>10:40</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -186,6 +198,7 @@
             <td>Complex</td>
             <td>Sarah</td>
             <td>06:25</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -193,6 +206,7 @@
             <td>Difficult</td>
             <td>Robert</td>
             <td>21:05</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -200,6 +214,7 @@
             <td>Huge Challenge</td>
             <td>Alice</td>
             <td>02:50</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -207,6 +222,7 @@
             <td>Puzzling</td>
             <td>Kevin</td>
             <td>16:15</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -214,6 +230,7 @@
             <td>Intense</td>
             <td>Jennifer</td>
             <td>07:30</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -221,6 +238,7 @@
             <td>Herculean</td>
             <td>Mark</td>
             <td>19:45</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -228,6 +246,7 @@
             <td>Exhausting</td>
             <td>Laura</td>
             <td>23:59</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -235,6 +254,7 @@
             <td>Fierce</td>
             <td>Daniel</td>
             <td>04:35</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -242,6 +262,7 @@
             <td>Grueling</td>
             <td>Karen</td>
             <td>11:20</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -249,6 +270,7 @@
             <td>Tough</td>
             <td>Steven</td>
             <td>13:05</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -256,6 +278,7 @@
             <td>Formidable</td>
             <td>Patricia</td>
             <td>18:50</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -263,6 +286,7 @@
             <td>Daunting</td>
             <td>Richard</td>
             <td>05:45</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
           
           <tr>
@@ -270,8 +294,9 @@
             <td>Gargantuan</td>
             <td>Emily</td>
             <td>22:30</td>
+            <td><img src="Asstes/Icons/delete.png" alt="delete" id="delete-task-popup" onclick="document.getElementById('delete-task').style.display='block'" ></td>
           </tr>
-          
+        </tbody>
       </table>
       <!-- Delete Task Popup START -->
       <div id="delete-task" class="modal">
@@ -346,6 +371,11 @@
       </main>
       <script src="/JS/sidenav.js"></script>
       <script src="/JS/timer.js"></script>
+      <script src="/JS/tableFilterEngine.js"></script>
+
+      <script type="module" src="./JS/supabase.js"></script>
+      <script type="module" src="./JS/logout.js"></script>
+      <script type="module" src="./JS/tasks.js"></script>
 
 
 </body>

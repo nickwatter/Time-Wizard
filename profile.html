@@ -8,6 +8,8 @@
     <script src="/JS/projects.js"></script>
     <script src="/JS/addtask.js"></script>
 
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
@@ -22,7 +24,7 @@
             <h2>Profile</h2>
         </div>
     </a>
-    <a href="index.html">
+    <a href="dashboard.html">
         <div class="item">
             <img src="/Asstes/Icons/whitedashboard.png" alt="Dashboard" class="imgsidenav">
             <h2>Dashboard</h2>
@@ -34,13 +36,7 @@
             <h2>Projects</h2>
         </div>
     </a>
-    <a href="tasks.html">
-        <div class="item">
-            <img src="/Asstes/Icons/whitetasks.png" alt="Tasks" class="imgsidenav">
-            <h2>Tasks</h2>
-        </div>
-    </a>
-    <a href="tasks.html">
+    <a href="javascript:void(0)">
         <div class="item" id="logoutbtn">
             <img src="/Asstes/Icons/logout.png" alt="Logout" class="imgsidenav">
         </div>
@@ -59,30 +55,32 @@
       <h1>Profile</h1>
       <div>
         <div>
-          <img src="Asstes/Icons/avatar.webp" alt="Avatar" class="profile-picture">
           <form action="">
             <div class="profile-wrapper">
                 <div class="container-add-task-project" id="profile-flex">
-                  <label id="label-task-project" for="name">Name</label>
-                  <input id="input-task-project" type="text" placeholder="name">
+                    <label class="label-profile" for="e-mail">E-mail</label>
+                    <input id="profile-email" class="input-profile" name="e-mail" type="email" placeholder="max.mustermann@gmail.com" disabled>
                 </div>
                 <div class="container-add-task-project" id="profile-flex">
-                  <label id="label-task-project" for="e-mail">E-mail</label>
-                  <input id="input-task-project" type="email" placeholder="max.mustermann@gmail.com">
-              </div>
+                  <label class="label-profile" for="name">Name</label>
+                  <input id="profile-name" class="input-profile" name="name" type="text" placeholder="name">
+                </div>
             </div>
           </form>
         </div>
              <!-- Add Project Try 1 -->
-             <button class="addbtn" id="edit-profile" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Save</button>
+             <button class="addbtn" id="edit-profile" style="width:auto;">Save</button>
 
           </div>
       </div>
     </div>
             
    </main>
-      <script src="/JS/sidenav.js"></script>
-
+    <script src="/JS/sidenav.js"></script>
+    
+    <script type="module" src="./JS/supabase.js"></script>
+    <script type="module" src="./JS/profile.js"></script>
+    <script type="module" src="./JS/logout.js"></script>
 
 </body>
 </html>
