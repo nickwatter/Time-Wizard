@@ -1,8 +1,10 @@
 # Time Wizard
  Time Management software
 
-hola meine freunde
-halo
+Insgesamt war das Webapp-Projekt eine lehrreiche Erfahrung, die uns Einsichten in technisches Know-how, Teamarbeit, Zeitmanagement und Planung vermittelte. Die Zusammenarbeit im Team hatte sowohl Ups als auch Downs. Wir mussten zuerst herausfinden wer seine Kompetenzen wo am besten einbringen konnte.  In der Anfangsphase neigten wir dazu, uns zu stark in technische Details zu vertiefen, was zu einem Zeitdruck gegen Ende des Projektes führte. Dieses mangelnde Bewusstsein für das Zeitmanagement wurde uns am Ende zum Verhängnis, als wir feststellten, dass wir nicht genügend Zeit hatten, um die Webapp von Anfang bis Ende perfekt zu programmieren. Diese Erkenntnis unterstreicht die Wichtigkeit einer klaren zeitlichen Struktur und regelmässigen Überprüfung des Fortschritts. Wir hatten auch das Gefühl, dass die Inputs zu Javascript von letztem Semester uns nicht genügend auf unser Projekt vorbereitet hat. Wir musste viel neues dazu lernen. 
 
-YOu're a wizard Joel
-Wingardium Leviosa
+Herausforderungen:
+Die Herausforderungen in der Planungsphase waren vielschichtig. Insbesondere haben wir uns beim User Flow und dem Entity-Relationship-Modell etwas verloren und uns zu sehr in Details vertieft, was zu einer unnötigen Zeitinvestition führte. Unser Enthusiasmus führte dazu, dass wir Ideen entwickelten, die in der Praxis nicht realistisch umsetzbar waren. Das mussten wir uns dann in der Umsetzung eingestehen und die gedachten Features streichen. Allgemein haben wir unsere Priorisierung falsch gesetzt. Eine frühe Zeitplanung hätte uns geholfen, realistischere Ziele zu setzen und die Planung effektiver zu gestalten. Die Aufteilung der Programmierarbeit stellte sich auch etwas schwerer als gedacht heraus. Im Frontendbereich hatten wir Situationen, wo es zu Kollisionen der verschiedenen programmierten Codes gekommen ist.
+
+Quellen und Methodik: 
+Unsere Hauptquellen während der Programmierung waren W3Schools, Stack Overflow und Github Copilot. Diese Ressourcen erwiesen sich als wertvoll, um technische Herausforderungen zu überwinden und neue Konzepte zu erlernen. Die Kombination aus Online-Dokumentation, Community-Foren und KI-unterstützter Codegenerierung ermöglichte es uns, effizient und zielgerichtet zu arbeiten.
